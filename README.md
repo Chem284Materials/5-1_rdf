@@ -1,7 +1,7 @@
 # Evaluating Radial Distribution Functions on a GPU
 
 In this repository is a code, `compute_rdf.py`, that computes the O-O, O-H, and H-H intermolecular radial distribution functions (RDFs) for a liquid water.
-It requires an XYZ trajectory file, `water_traj.xyz`, which you can find on the bCourses page for this problem set.
+It requires an XYZ trajectory file, `water_traj.xyz`, which you can find [here](https://github.com/Chem284Materials/rdf_data/blob/main/water_traj.xyz) (click the "Download raw file" button).
 
 ## Task 1 - Port to CUDA
 
