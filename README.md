@@ -26,3 +26,4 @@ In other words, utilize the GPU to perform accumulation on previously read frame
 One way to implement this is to have a fixed number of streams that you rotate through; after you've assigned frames to all the streams, you assign the next frame to the first stream.
 
 Measure and report your timings.
+Provide your code for this task **in addition** to your code for Task 1 (add it to the repository as a separate file).
