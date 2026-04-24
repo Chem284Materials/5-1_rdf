@@ -18,7 +18,7 @@ Place the `water_rdfs.png` file you generate in this repository.
 **Hints:** You may find that the [atomicAdd](https://docs.nvidia.com/cuda/archive/9.0/cuda-c-programming-guide/#atomicadd) function is useful.
 You should keep in mind that, much like the case of atomic operations with OpenMP, atomic operations in CUDA have a performance impact.
 In addition, you will need to be careful about integer overflow during your accumulation operation.
-You may use integers larger than `int32` where appropriate.
+You may use integer types larger than `int32` where appropriate.
 
 ## Task 2 - Use Streams While Reading the Trajectory File
 
