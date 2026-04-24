@@ -15,19 +15,15 @@ Report your timings and the GPU you ran the timings on.
 
 Place the `water_rdfs.png` file you generate in this repository.
 
-**Hint:** You will need to be careful about integer overflow during you accumulation operation.
-You may use `unsigned long long` integers where appropriate.
+**Hints:** You may find that the [atomicAdd](https://docs.nvidia.com/cuda/archive/9.0/cuda-c-programming-guide/#atomicadd) function is useful.
+You should keep in mind that, much like the case of atomic operations with OpenMP, atomic operations in CUDA have a performance impact.
+In addition, you will need to be careful about integer overflow during your accumulation operation.
+You may use integers larger than `int32` where appropriate.
 
-## Task 2 - Use Streams
+## Task 2 - Use Streams While Reading the Trajectory File
 
-Modify your code so that the data corresponding to each trajectory frame is evaluated by a different CUDA stream.
+Modify your code so that upon reading the data for a trajectory frame, you immediately execute a CUDA stream to perform the accumulation calculation for that frame.
+In other words, you utilize the GPU to perform accumulation on previously read frames concurrently with the process of reading from `water_traj.xyz`.
+One way to implement this is to have a fixed number of streams that you rotate through; after you've assigned frames to all the streams, you assign the next frame to the first stream.
 
-In addition to measuring the kernel execution time, also measure the time required to read the `water_traj.xyz` data file and the total time.
-Report your timings and the GPU you ran the timings on.
-
-## Task 3 - Use Streams While Reading the Trajectory File
-
-Modify your code so that upon reading the data for a trajectory frame, you immediately launch a CUDA stream to perform the accumulation calculation.
-In other words, you should have the GPU performing accumulation on previously read frames concurrently with the process of reading from `water_traj.xyz`.
-
-Measure and report your total walltime.
+Measure and report your timings.
