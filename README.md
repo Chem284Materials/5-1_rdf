@@ -23,7 +23,7 @@ You may use integer types larger than `int32` where appropriate.
 ## Task 2 - Use Streams While Reading the Trajectory File
 
 Modify your code so that upon reading the data for a trajectory frame, you immediately execute a CUDA stream to perform the accumulation calculation for that frame.
-In other words, you utilize the GPU to perform accumulation on previously read frames concurrently with the process of reading from `water_traj.xyz`.
+In other words, utilize the GPU to perform accumulation on previously read frames concurrently with the process of reading from `water_traj.xyz`.
 One way to implement this is to have a fixed number of streams that you rotate through; after you've assigned frames to all the streams, you assign the next frame to the first stream.
 
 Measure and report your timings.
