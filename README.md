@@ -27,3 +27,5 @@ One way to implement this is to have a fixed number of streams that you rotate t
 
 Measure and report your timings.
 Provide your code for this task **in addition** to your code for Task 1 (add it to the repository as a separate file).
+
+## Answers
