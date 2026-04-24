@@ -8,7 +8,7 @@ It requires an XYZ trajectory file, `water_traj.xyz`, which you can find [here](
 Using PyCUDA, port the `accumulate` function to run on GPUs.
 Use CUDA events to obtain accurate measurements of the kernel execution walltime.
 Make intelligent use of shared memory.
-Do not use streams (we'll introduce streams in the next task).
+Do not use CUDA streams (we'll introduce streams in the next task).
 
 In addition to measuring the kernel execution time, also measure the time required to read the `water_traj.xyz` data file and the total time.
 Report your timings and the GPU you ran the timings on.
